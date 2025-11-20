@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f172a;
+    padding: 40px;
+    color: #e2e8f0;
+}
+
+/* Titulos */
+h1, h2, h3 {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-title {
+    font-family: "Material Icons Outlined";
+    font-size: 34px;
+    vertical-align: middle;
+}
+
+
+/* Tarjetas */
+.card {
+    background: #1e293b;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 14px;
+    border: 1px solid #334155;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+}
+
+
+/* Forms */
+
+form {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #334155;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.25);
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    background: #0f172a;
+    color: white;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 6px #3b82f6;
+}
+
+
+/* Botones */
+button, .btn {
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white !important;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+button:hover, .btn:hover {
+    background: #60a5fa;
+    transform: translateY(-2px);
+}
+
+
+/* Lista Lugares */
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
+    background: #0f172a;
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin: 6px 0;
+    border: 1px solid #334155;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-list {
+    font-family: "Material Icons Outlined";
+    font-size: 23px;
+}
+
+/* COLORES POR ESTADO */
+.green { color: #22c55e; }
+.blue { color: #3b82f6; }
+.yellow { color: #fbbf24; }
+.red { color: #ef4444; }
+
+a {
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+
+.climas {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: solid;
+    font-size: 18px;
+}
+
+.h1Clima {
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: solid;
+    font-size: 35px;
+    text-align: center;
+}
+
+#cloud {
+    font-size: 35px;
+    vertical-align: auto;
+}

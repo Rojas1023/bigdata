@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predicción de Velocidad</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1><span class="material-icons-outlined icon-title">speed</span>Predicción de Velocidad en Bogotá</h1>
+
+{% if weather %}
+<div class="card">
+    <h3><span id="cloud" class="material-icons-outlined">cloud</span> <span class="h1Clima">Clima Actual</span></h3>
+    <p><span class="material-icons-outlined">thermostat</span> Temperatura: <span class="climas">{{ weather.temp }}°C</span></p>
+    <p><span class="material-icons-outlined">opacity</span> Humedad: <span class="climas">{{ weather.humidity }}%</span></p>
+    <p><span class="material-icons-outlined">wb_cloudy</span> Condición: <span class="climas">{{ weather.weather }}</span></p>
+    <p><span class="material-icons-outlined">air</span> Viento: <span class="climas">{{ weather.wind }}m/s</span></p>
+</div>
+{% endif %}
+
+<form method="POST">
+    <label><span class="material-icons-outlined">schedule</span> Hora del Día:</label>
+    <input type="number" name="hora" min="0" max="23" required placeholder="00 - 23">
+
+    <label><span class="material-icons-outlined">straighten</span> Distancia del tramo (metros):</label>
+    <input type="number" name="distancia" step="0.1" required placeholder="Ejemplo: 1500">
+
+    <button type="submit">
+        <span class="material-icons-outlined">play_arrow</span> Generar Predicción
+    </button>
+</form>
+
+{% if prediction %}
+<div class="card">
+    <h2><span class="material-icons-outlined">speed</span> Velocidad Estimada: {{ prediction }}km/h</h2>
+</div>
+{% endif %}
+
+<a href="/dashboard" class="btn">
+    <span class="material-icons-outlined">monitoring</span> Ir al Dashboard →
+</a>
+
+</body>
+</html>

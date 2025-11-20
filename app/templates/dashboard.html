@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard de Velocidades</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1><span class="material-icons-outlined icon-title">monitoring</span>Dashboard de Velocidades</h1>
+
+<h2>📈 Velocidad por Hora</h2>
+<div class="card">
+    {{ graph1|safe }}
+</div>
+
+<h2>📊 Histograma de Velocidades</h2>
+<div class="card">
+    {{ graph2|safe }}
+</div>
+
+<h2><span class="material-icons-outlined">traffic</span> Congestión por Dirección</h2>
+<div class="card">
+<ul>
+    {% for item in congest_list %}
+        <li>
+            {% if item.icon == "green" %}
+                <span class="material-icons-outlined icon-list green">check_circle</span>
+            {% elif item.icon == "blue" %}
+                <span class="material-icons-outlined icon-list blue">info</span>
+            {% elif item.icon == "yellow" %}
+                <span class="material-icons-outlined icon-list yellow">warning</span>
+            {% else %}
+                <span class="material-icons-outlined icon-list red">location_on</span>
+            {% endif %}
+            
+            <strong>{{ item.origen }}:</strong> {{ item.estado }}
+        </li>
+    {% endfor %}
+</ul>
+</div>
+
+<a href="/" class="btn">
+    <span class="material-icons-outlined">arrow_back</span> Volver
+</a>
+
+</body>
+</html>
